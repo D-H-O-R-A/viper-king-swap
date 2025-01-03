@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
       border: 1px solid;
       border-bottom: 2px solid;
       border-color: ${({ theme }) => (theme.isDark ? '#383241' : '#E7E3EB')};
-      background: ${({ theme }) => (theme.isDark ? '#27262C ' : '#FFFFFF')};
+      background: ${({ theme }) => (theme.isDark ? '#27262c ' : '#FFFFFF')};
       padding: 16px;
       gap: 16px;
       max-width: unset;
@@ -102,12 +102,12 @@ const GlobalStyle = createGlobalStyle`
         padding: 4px 4px 4px 16px;
         &:not(.input-error).input-focused {
             &, &:hover {
-            box-shadow: 0px 0px 0px 1px #A881FC, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
+            box-shadow: 0px 0px 0px 1px #E0E0E0, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
             border-color: ${({ theme }) => (theme.isDark ? '#55496E' : '#D7CAEC')};
           }
         }
         &:not(.input-error):hover {
-          box-shadow: 0px 0px 0px 1px #A881FC, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
+          box-shadow: 0px 0px 0px 1px #E0E0E0, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
           outline: none;
         }
         input {
@@ -195,12 +195,12 @@ const GlobalStyle = createGlobalStyle`
         border-radius: 16px;
         &:not(.input-error).input-focused {
             &, &:hover {
-            box-shadow: 0px 0px 0px 1px #A881FC, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
+            box-shadow: 0px 0px 0px 1px #E0E0E0, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
             border-color: ${({ theme }) => (theme.isDark ? '#55496E' : '#D7CAEC')};
           }
         }
         &:not(.input-error):hover {
-          box-shadow: 0px 0px 0px 1px #A881FC, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
+          box-shadow: 0px 0px 0px 1px #E0E0E0, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
           outline: none;
         }
         input {
@@ -334,7 +334,7 @@ const GlobalStyle = createGlobalStyle`
           line-height: 24px;
           color: ${({ theme }) => (theme.isDark ? '#F4EEFF' : '#280D5F')};
           img {
-            outline: 2px solid ${({ theme }) => (theme.isDark ? '#372F47' : '#EEEAF4')};
+            outline: 2px solid ${({ theme }) => (theme.isDark ? '#27262c' : '#EEEAF4')};
           }
         }
       }
@@ -343,7 +343,7 @@ const GlobalStyle = createGlobalStyle`
     .bccb-widget-token-modal-content {
       width: 100vw;
       height: 100vh;
-      background: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
+      background: ${({ theme }) => (theme.isDark ? '#27262c' : '#FFFFFF')};
       ${({ theme }) => theme.mediaQueries.sm} {
         max-height: 80vh;
         width: 360px;
@@ -459,15 +459,15 @@ const GlobalStyle = createGlobalStyle`
         line-height: 150%; /* 24px */
         border-radius: 16px;
         color: ${({ theme }) => (theme.isDark ? '#B8ADD2' : '#333333')};
-        background: ${({ theme }) => (theme.isDark ? '#372F47' : '#EEEAF4')};
+        background: ${({ theme }) => (theme.isDark ? '#27262c' : '#EEEAF4')};
         outline: none;
         border: none;
         border: 1px solid ${({ theme }) => (theme.isDark ? '#55496E' : '#D7CAEC')};
         box-shadow: 0px 2px 0px -1px rgba(0, 0, 0, 0.16) inset;
         &:focus, &:hover {
-          box-shadow: 0px 0px 0px 1px #A881FC, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
+          box-shadow: 0px 0px 0px 1px #E0E0E0, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
           border-color: ${({ theme }) => (theme.isDark ? '#55496E' : '#D7CAEC')};
-          background: ${({ theme }) => (theme.isDark ? '#372F47' : '#EEEAF4')};
+          background: ${({ theme }) => (theme.isDark ? '#27262c' : '#EEEAF4')};
         }
         &::placeholder {
           color: ${({ theme }) => (theme.isDark ? '#B8ADD2' : '#333333')};
@@ -525,7 +525,7 @@ const GlobalStyle = createGlobalStyle`
 
     /* Route */
     .bccb-widget-route-container {
-      background: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
+      background: ${({ theme }) => (theme.isDark ? '#27262c' : '#FFFFFF')};
       max-width: 328px;
       padding: 0;
       box-shadow: none;
@@ -614,7 +614,7 @@ const GlobalStyle = createGlobalStyle`
     .bccb-widget-transaction-confirming-modal, .bccb-widget-transaction-approve-modal,
     .bccb-widget-transaction-failed-modal, .bccb-widget-transaction-submitted-modal
     {
-      background: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
+      background: ${({ theme }) => (theme.isDark ? '#27262c' : '#FFFFFF')};
       box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16), 0px 4px 8px 0px rgba(0, 0, 0, 0.32);
 
       .bccb-widget-modal-close-button {
@@ -727,13 +727,13 @@ const GlobalStyle = createGlobalStyle`
       height: 25px;
     }
     .bccb-widget-route-name-tag-bestTime {
-      background: ${({ theme }) => (theme.isDark ? '#A881FC' : '#333333')};
+      background: ${({ theme }) => (theme.isDark ? '#E0E0E0' : '#333333')};
     }
 
     .bccb-widget-modal-route-content {
       width: 100vw;
       height: 100vh;
-      background: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
+      background: ${({ theme }) => (theme.isDark ? '#27262c' : '#FFFFFF')};
       ${({ theme }) => theme.mediaQueries.sm} {
         height: auto;
         max-height: 80vh;
@@ -790,20 +790,20 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .bccb-widget-info-tooltip {
-      background: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262C')};
-      color: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
+      background: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262c')};
+      color: ${({ theme }) => (theme.isDark ? '#27262c' : '#FFFFFF')};
       border-radius: 16px;
       padding: 16px;
       font-size: 14px;
       line-height: 150%;
       max-width: 280px;
       .chakra-tooltip__arrow {
-        background: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262C')};
+        background: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262c')};
       }
       .bccb-widget-route-info-tooltip-fee {
         line-height: 150%;
         font-size: 14px;
-        color: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
+        color: ${({ theme }) => (theme.isDark ? '#27262c' : '#FFFFFF')};
       }
     }
 
@@ -811,8 +811,8 @@ const GlobalStyle = createGlobalStyle`
       z-index: 1;
 
       .bccb-widget-route-token-tooltip-content {
-        --popper-arrow-bg: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262C')};;
-        background: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262C')};
+        --popper-arrow-bg: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262c')};;
+        background: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262c')};
         border-radius: 16px;
         padding: 16px;
       }
@@ -820,12 +820,12 @@ const GlobalStyle = createGlobalStyle`
       .bccb-widget-route-token-tooltip-body {
         padding: 0;
         &>div {
-          color: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
+          color: ${({ theme }) => (theme.isDark ? '#27262c' : '#FFFFFF')};
           font-size: 14px;
           line-height: 150%;
           font-weight: 400;
           &>a:hover {
-            color: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
+            color: ${({ theme }) => (theme.isDark ? '#27262c' : '#FFFFFF')};
           }
         }
       }

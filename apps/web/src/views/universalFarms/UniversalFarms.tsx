@@ -18,7 +18,7 @@ const StyledTab = styled(Tab)`
 
 const PAGES_LINK = {
   POOLS: '/liquidity/pools',
-  POSITIONS: '/liquidity/positions',
+  POSITIONS: '/liquidity',
   HISTORY: '/farms/history',
 }
 

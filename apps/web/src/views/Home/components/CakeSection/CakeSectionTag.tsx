@@ -1,17 +1,17 @@
 import { useTranslation } from '@pancakeswap/localization'
 import {
-  BulbIcon,
-  EarnIcon,
-  GovernanceIcon,
-  InsertChartOutlinedIcon,
-  NftIcon,
-  PieChartIcon,
-  PoolIcon,
-  RocketIcon,
-  StoreIcon,
-  SwapIcon,
-  Text,
-  TrophyIcon,
+    BulbIcon,
+    EarnIcon,
+    GovernanceIcon,
+    InsertChartOutlinedIcon,
+    NftIcon,
+    PieChartIcon,
+    PoolIcon,
+    RocketIcon,
+    StoreIcon,
+    SwapIcon,
+    Text,
+    TrophyIcon,
 } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
 import { cloneElement, useLayoutEffect, useMemo, useRef, useState } from 'react'
@@ -19,12 +19,12 @@ import Marquee from 'react-fast-marquee'
 import { styled } from 'styled-components'
 
 import {
-  PartnerAlpaca,
-  PartnerApolloX,
-  PartnerLedger,
-  PartnerMetaMask,
-  PartnerMobox,
-  PartnerVenus,
+    PartnerAlpaca,
+    PartnerApolloX,
+    PartnerLedger,
+    PartnerMetaMask,
+    PartnerMobox,
+    PartnerVenus,
 } from './PartnerLogos'
 
 const MARQUEE_WIDTH = 210
@@ -201,7 +201,7 @@ export const CakeSectionTag: React.FC<{ icon: React.ReactElement; text: string }
   const [bgWidth, setBgWidth] = useState(() => textRef?.current?.offsetWidth ?? 0)
   return (
     <FeatureTag $bgWidth={bgWidth + 54}>
-      {cloneElement(icon, { color: theme.isDark ? '#A881FC' : theme.colors.secondary })}
+      {cloneElement(icon, { color: theme.isDark ? '#E0E0E0' : theme.colors.secondary })}
       <Text fontWeight="400" ref={textRef}>
         {text}
       </Text>

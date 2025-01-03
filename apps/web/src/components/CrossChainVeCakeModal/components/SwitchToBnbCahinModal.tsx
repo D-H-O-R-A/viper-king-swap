@@ -1,15 +1,15 @@
 import { useTranslation } from '@pancakeswap/localization'
 import {
-  Box,
-  Button,
-  Heading,
-  ModalBody,
-  ModalCloseButton,
-  ModalContainer,
-  ModalHeader,
-  ModalTitle,
-  ModalV2,
-  Text,
+    Box,
+    Button,
+    Heading,
+    ModalBody,
+    ModalCloseButton,
+    ModalContainer,
+    ModalHeader,
+    ModalTitle,
+    ModalV2,
+    Text,
 } from '@pancakeswap/uikit'
 import NextLink from 'next/link'
 import { styled, useTheme } from 'styled-components'
@@ -18,7 +18,7 @@ const BCakeInfoWrapper = styled.div`
   position: relative;
   display: flex;
   max-width: 191px;
-  background: ${({ theme }) => (theme.isDark ? 'white' : '#27262c')};
+  background: ${({ theme }) => (theme.isDark ? 'white' : '#8A8D8F')};
   flex-direction: column;
   margin-top: 16px;
   margin-bottom: 16px;

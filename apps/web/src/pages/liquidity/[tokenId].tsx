@@ -564,7 +564,7 @@ export default function PoolPage() {
                   </RowBetween>
                 </Box>
               }
-              backTo="/liquidity/positions"
+              backTo="/liquidity"
               noConfig
               buttons={
                 !isMobile &&

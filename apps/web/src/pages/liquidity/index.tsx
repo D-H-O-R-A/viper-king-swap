@@ -221,7 +221,7 @@ export default function PoolListPage() {
         !showAllPositionWithQuery &&
         !v3Loading &&
         !v2Loading &&
-        (selectedTypeIndex === FILTER.ALL || selectedTypeIndex === FILTER.V3)
+        (selectedTypeIndex === FILTER.V2)
       )
     }
     return false
@@ -314,7 +314,7 @@ export default function PoolListPage() {
 
               <ButtonMenu
                 scale="sm"
-                activeIndex={selectedTypeIndex}
+                activeIndex={0}
                 onItemClick={(index) => setSelectedTypeIndex(index)}
                 variant="subtle"
               >
@@ -340,7 +340,7 @@ export default function PoolListPage() {
           )}
         </Body>
         <CardFooter style={{ textAlign: 'center' }}>
-          <NextLink href="/add" passHref>
+          <NextLink href="/find" passHref>
             <Button id="join-pool-button" width="100%" startIcon={<AddIcon color="invertedContrast" />}>
               {t('Add Liquidity')}
             </Button>

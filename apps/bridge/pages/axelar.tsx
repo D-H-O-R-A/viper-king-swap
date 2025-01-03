@@ -27,7 +27,7 @@ const lightStyle = {
 const darkStyle = {
   neutralContent: '#b8add2',
   baseContent: '#ffffff',
-  base100: '#372f47',
+  base100: '#8A8D8F',
   base200: '#26272c',
   base300: '#26272c',
   error: '#ed4b9e',

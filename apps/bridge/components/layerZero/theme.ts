@@ -61,9 +61,9 @@ export const PancakeSwapTheme = {
         light: '#1EC7D3',
       },
       secondary: {
-        main: '#372F47',
+        main: '#8A8D8F',
         contrastText: '#F4EEFF',
-        light: '#372F47',
+        light: '#8A8D8F',
       },
       info: { main: '#1EC7D3' },
       success: { main: '#8AE06C' },

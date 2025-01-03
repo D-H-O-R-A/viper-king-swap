@@ -5,7 +5,7 @@ import { SvgProps } from "../types";
 
 const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   const theme = useTheme();
-  const primaryColor = theme.isDark ? "#372F47" : "#EEEAF4";
+  const primaryColor = theme.isDark ? "#27262c" : "#EEEAF4";
   const secondaryColor = theme.isDark ? "#B8ADD2" : "#333333";
 
   return (

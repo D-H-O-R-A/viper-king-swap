@@ -2,7 +2,7 @@ import { rgba } from 'polished'
 
 export const dark = {
   input: {
-    background: '#372F47',
+    background: '#27262c',
     title: '#8C8F9B',
     border: {
       default: '#55496E',
