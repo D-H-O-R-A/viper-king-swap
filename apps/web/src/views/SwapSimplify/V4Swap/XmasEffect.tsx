@@ -1,4 +1,3 @@
-import { ASSET_CDN } from 'config/constants/endpoints'
 import { memo } from 'react'
 import { css, keyframes, styled } from 'styled-components'
 
@@ -20,7 +19,6 @@ const XmaxBg = styled.div`
   right: 0;
   width: 100vw;
   height: 40.625vw;
-  background: url('${ASSET_CDN}/web/swap/xmas/xmas-bg-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.png')
     no-repeat center center fixed;
   background-size: cover;
 `
@@ -35,7 +33,6 @@ const XmaxTree = styled.div`
   left: 1%;
   width: 16vw;
   height: 19.2vw;
-  background: url('${ASSET_CDN}/web/swap/xmas/xmas-tree-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.png')
     no-repeat center center fixed;
   background-size: cover;
 `
@@ -146,13 +143,6 @@ const generateRandomOpacityStyles = (count = 11) => {
 
 export const XmasEffect: React.FC = memo(() => {
   return (
-    <SnowflakesWrapper aria-hidden="true" $itemCount={11}>
-      {Array.from({ length: 10 }).map((_, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <Snowflake key={`SnowFlakeElements${index}`}>❄️</Snowflake>
-      ))}
-      <XmaxBg />
-      <XmaxTree />
-    </SnowflakesWrapper>
+    <></>
   )
 })
