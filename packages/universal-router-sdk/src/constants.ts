@@ -7,7 +7,7 @@ const UNIVERSAL_ROUTER_ADDRESSES: Record<ChainId, Address> = {
   [ChainId.SEPOLIA]: '0x55D32fa7Da7290838347bc97cb7fAD4992672255',
 
   [ChainId.BSC]: '0x1A0A18AC4BECDDbd6389559687d1A73d8927E416',
-  [ChainId.BSC_TESTNET]: '0xd77C2afeBf3dC665af07588BF798bd938968c72E',
+  [ChainId.BSC_TESTNET]: '0x14ec156334592562d73553ece9c192441190b776',
 
   // [ChainId.SCROLL]: '0xB89a6778D1efE7a5b7096757A21b810CC2886fa1',
   [ChainId.SCROLL_SEPOLIA]: '0xB89a6778D1efE7a5b7096757A21b810CC2886fa1',
@@ -35,7 +35,10 @@ const UNIVERSAL_ROUTER_ADDRESSES: Record<ChainId, Address> = {
 
 export const getUniversalRouterAddress = (chainId: ChainId): Address => {
   if (!(chainId in UNIVERSAL_ROUTER_ADDRESSES)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
-  return UNIVERSAL_ROUTER_ADDRESSES[chainId]
+ 
+    var a = UNIVERSAL_ROUTER_ADDRESSES[chainId]
+    console.log("Universal Router Address: ",a)
+    return a;
 }
 
 export const CONTRACT_BALANCE = 2n ** 255n

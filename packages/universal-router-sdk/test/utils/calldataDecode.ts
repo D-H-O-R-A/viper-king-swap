@@ -1,4 +1,4 @@
-import { decodeFunctionData, Hex, decodeAbiParameters, ParseAbiParameters } from 'viem'
+import { decodeAbiParameters, decodeFunctionData, Hex, ParseAbiParameters } from 'viem'
 import { UniversalRouterABI } from '../../src/abis/UniversalRouter'
 import { ABI_PARAMETER, CommandType } from '../../src/utils/routerCommands'
 
@@ -51,6 +51,8 @@ export function decodeUniversalCalldata(calldata: Hex): DecodedCommand[] {
       args: formatedArgs,
     })
   }
+
+  console.log("Decoded v3:",decoded)
 
   return decoded
 }

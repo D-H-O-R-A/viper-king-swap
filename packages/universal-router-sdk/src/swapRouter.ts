@@ -32,16 +32,19 @@ export abstract class PancakeSwapUniversalRouter {
     }
 
     const nativeCurrencyValue = inputCurrency.isNative
-      ? SmartRouter.maximumAmountIn(tradeCommand.trade, options.slippageTolerance, tradeCommand.trade.inputAmount)
-          .quotient
-      : 0n
+    ? (SmartRouter.maximumAmountIn(tradeCommand.trade, options.slippageTolerance, tradeCommand.trade.inputAmount)
+        .quotient * 110n) / 100n  // Adiciona 10% corretamente usando BigInt
+    : 0n;
+  
 
     tradeCommand.encode(planner)
-    return PancakeSwapUniversalRouter.encodePlan(planner, nativeCurrencyValue, {
+    var b = PancakeSwapUniversalRouter.encodePlan(planner, nativeCurrencyValue, {
       deadline: options.deadlineOrPreviousBlockhash
         ? BigInt(options.deadlineOrPreviousBlockhash.toString())
         : undefined,
     })
+    console.log("Value v3 b:",b);
+    return b;
   }
 
   /**
@@ -63,6 +66,7 @@ export abstract class PancakeSwapUniversalRouter {
           functionName: 'execute',
         })
       : encodeFunctionData({ abi: UniversalRouterABI, args: [commands, inputs], functionName: 'execute' })
+    console.log("Calldata v3:",calldata);
     return { calldata, value: toHex(nativeCurrencyValue) }
   }
 }

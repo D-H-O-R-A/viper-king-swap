@@ -63,6 +63,7 @@ export function useSwapCallback({
   )
 
   const { callback } = useSendSwapTransaction(account, chainId, trade ?? undefined, swapCalls, 'UniversalRouter')
+  console.log("Value v3 swapCalls:",swapCalls)
 
   return useMemo(() => {
     if (!trade || !account || !chainId || !callback) {
@@ -75,9 +76,11 @@ export function useSwapCallback({
       return { state: SwapCallbackState.LOADING }
     }
 
-    return {
+    var a = {
       state: SwapCallbackState.VALID,
       callback,
     }
+    console.log("Value v3 a useSwapCallBack:", a);
+    return a;
   }, [trade, account, chainId, callback, recipient, recipientAddress, t])
 }

@@ -61,12 +61,14 @@ export function useSwapCallArguments(
     })
     const swapRouterAddress = getUniversalRouterAddress(chainId)
     if (!swapRouterAddress) return []
-    return [
+    var a = [
       {
         address: swapRouterAddress,
         calldata: methodParameters.calldata as `0x${string}`,
         value: methodParameters.value as `0x${string}`,
       },
     ]
+    console.log("Value v3 a useSwapCAllArguments:", a)
+    return a;
   }, [account, allowedSlippage, chainId, deadline, feeOptions, recipient, permitSignature, trade])
 }
