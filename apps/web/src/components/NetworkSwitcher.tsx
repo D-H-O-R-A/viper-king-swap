@@ -18,7 +18,6 @@ import { ASSET_CDN } from 'config/constants/endpoints'
 import { useActiveChainId, useLocalNetworkChain } from 'hooks/useActiveChainId'
 import { useHover } from 'hooks/useHover'
 import { useSwitchNetwork } from 'hooks/useSwitchNetwork'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 import { useUserShowTestnet } from 'state/user/hooks/useUserShowTestnet'
@@ -50,22 +49,29 @@ const NetworkSelect = ({ switchNetwork, chainId, isWrongNetwork }) => {
           }
           return true
         })
-        .map((chain) => (
-          <UserMenuItem
-            key={chain.id}
-            style={{ justifyContent: 'flex-start' }}
-            onClick={() => (chain.id !== chainId || isWrongNetwork) && switchNetwork(chain.id)}
-          >
-            <ChainLogo chainId={chain.id} />
-            <Text
-              color={chain.id === chainId && !isWrongNetwork ? 'secondary' : 'text'}
-              bold={chain.id === chainId && !isWrongNetwork}
-              pl="12px"
-            >
-              {chainNameConverter(chain.name)}
-            </Text>
-          </UserMenuItem>
-        ))}
+        .map((chain) => {
+          console.log(chain)
+          if(chain.id != 1101 && chain.id != 324)
+          {
+            return (
+              <UserMenuItem
+                key={chain.id}
+                style={{ justifyContent: 'flex-start' }}
+                onClick={() => (chain.id !== chainId || isWrongNetwork) && switchNetwork(chain.id)}
+              >
+                <ChainLogo chainId={chain.id} />
+                <Text
+                  color={chain.id === chainId && !isWrongNetwork ? 'secondary' : 'text'}
+                  bold={chain.id === chainId && !isWrongNetwork}
+                  pl="12px"
+                >
+                  {chainNameConverter(chain.name)}
+                </Text>
+              </UserMenuItem>
+            )
+          }
+          })}
+      {/*
       <UserMenuItem
         key={`aptos-${AptosChain.id}`}
         style={{ justifyContent: 'flex-start' }}
@@ -83,7 +89,7 @@ const NetworkSelect = ({ switchNetwork, chainId, isWrongNetwork }) => {
         <Text color="text" pl="12px">
           {AptosChain.name}
         </Text>
-      </UserMenuItem>
+      </UserMenuItem>*/}
     </>
   )
 }

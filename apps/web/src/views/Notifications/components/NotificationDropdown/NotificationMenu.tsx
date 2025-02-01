@@ -14,7 +14,7 @@ interface InotificationBellProps {
 const NotificationBell = ({ unread, toggleMenu }: InotificationBellProps) => {
   const unreadDisplay = unread >= 9 ? '9+' : `${unread}`
   return (
-    <BellIconContainer onClick={toggleMenu}>
+    <BellIconContainer  onClick={toggleMenu}>
       <BellIcon height={24} width={24} color="textSubtle" />
       {unread > 0 ? <div className="notification-badge">{unreadDisplay}</div> : null}
     </BellIconContainer>
@@ -52,7 +52,6 @@ const NotificationMenu: React.FC<{
   if (isMobile) {
     return (
       <Flex alignItems="center" justifyContent="center" tabIndex={-1}>
-        <NotificationBell unread={hasUnread} toggleMenu={toggleMenu} />
         <ModalV2 isOpen={isMenuOpen} onDismiss={toggleMenu} closeOnOverlayClick>
           <ModalWrapper onDismiss={toggleMenu} minWidth="320px" height="90vh">
             {children}
@@ -63,7 +62,6 @@ const NotificationMenu: React.FC<{
   }
   return (
     <Flex alignItems="center" justifyContent="center" height="100%" ref={ref} tabIndex={-1}>
-      <NotificationBell unread={hasUnread} toggleMenu={toggleMenu} />
       <Menu
         $isOpen={isMenuOpen}
         style={{ top: '100%', position: 'fixed' }}
